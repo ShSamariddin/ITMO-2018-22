@@ -1,0 +1,4 @@
+var samar, kamar:Integer;
+    i:char;
+    yes: Integer; Big, large, uf: String;
+

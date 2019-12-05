@@ -1,0 +1,153 @@
+1) в main с 50 по 59 строке есть массив b и мы должны с помощью bubble sort  отсортируем массив 
+
+в bubble sort мы принимаем массив который нам даёться как входной даный программы(который мы должныйнайти ) и с помощю этого массива мы сортируем наш массив  
+то есть берем i элемент в нашем массиве a[i] и сделаем swap(b[a[i]], b[a[i] + 1]);
+
+массив b:8,7,5,4,1,3,2,6,9,10
+ответ:0 1 2 3 4 5 6 0 1 2 3 4 5 0 1 2 3 0 1 2 1  но без пробелов 
+
+
+3) в этой задачи все легко мы заем 4 указателья и нам нада найти какую строку они образуют 
+#include <iostream>
+#include <cstdlib>
+#include <cstring>
+
+
+int main(){
+    int arr[4];
+    arr[0] = 0x314c6156;
+    arr[1] = 0x24405044;
+    arr[2] = 0x72307724;
+    arr[3] = 0x44;
+    size_t t = std::strlen((char*)arr);
+    for(size_t i = 0; i < t; ++i){
+        std::cout << ((char*)arr)[i];
+    }
+}
+4) 
+check - это функция который проверяет   на равенство  str1 == reverse(str2) 
+check2 - функция котоырй проверяет на корректность  строку 
+ответ:Flag{zfssaizs} 
+6)
+    обратный код 
+    # include <iostream>
+
+using namespace std;
+int us[258];
+
+int main() {
+    char c[10];
+    c[5] = 120;
+    for (int i = 4; i >= 0; i--) {
+        c[i] = c[i + 1] - i - 1;
+    }
+    for (int i = 0; i < 6; i ++){
+        cout << c[i];
+    }
+}
+
+7)
+# include <iostream>
+using namespace std;
+int a[270];
+int main()
+{
+    while(true) {
+        for (int i = 1; i <= 10; i++) {
+            a[i] = rand() % 10;
+        }
+        int s = 1;
+        for (int i = 1; i <= 10; i++) {
+            s = (s & a[i]);
+        }
+        int s1 = 0;
+        for (int i = 1; i <= 10; i++) {
+            s1 = (a[i] ^ s1);
+        }
+        if (s != 0 && s1 == 0) {
+            for(int i =1; i <= 10; i ++){
+                cout <<a[i]<<' ';
+            }
+            cout <<'\n';
+            return 0;
+        }
+        cout<<"a\n";
+    }
+}
+8)как в 6 задаче 
+
+9)
+# include <iostream>
+using namespace std;
+int us[258];
+int main()
+{
+    //39
+    int v5 = 117;
+    for(int i = 0; i <= 128; i ++){
+        v5 = (i + 1) *v5 % 256;
+        us[v5] = i + 1;
+        v5 = 117;
+    }
+    for(int j = 0; j <= 256; j ++){
+        if(us[j] > 0){
+            v5 = j;
+            for(int i = 0; i <= 128; i ++){
+                v5 = ((i + 1) * v5) % 256;
+                if(v5 == 118){
+                    cout << char(us[j] - 1)<<char(i)<<'\n';
+                }
+                v5 = j;
+            }
+        }
+    }
+}
+
+10)
+ответ:c14aeB
+13)
+
+обрытный код 
+
+# include <iostream>
+
+using namespace std;
+int us[258];
+
+int main() {
+    int a[10];
+    a[0]  = 97;
+    for(int i = 1; i < 6; i ++){
+        a[i] = a[i - 1] + i;
+    }
+    for(int i = 0; i < 6; i ++){
+        cout << char(a[i]);
+    }
+}
+последный символ все что угодно 
+
+
+14) в этой задачи у нас есть строка "This is my string.Possible this is flag"  это строка получаеться с  61 строки по 92  и  в функции function1 есть строка "123456789abcde" длина этой строки 14 и поэтому мы берем каждый символ по модулю 14 и выводим символ  который стоит на этом месте 
+
+# include <iostream>
+using namespace std;
+int main()
+{
+    //39
+    string str = "123456789abcde";
+    char  t[]{84,104,105,115,32,105,115,32,109,121, 32, 115, 116, 114, 105, 110, 103,46, 80, 111, 115, 115, 105, 98, 108, 101, 32, 116, 104,105, 115, 32, 105, 115, 32, 102, 108, 97, 103};
+    for(int i = 0; i< 39; i ++){
+        cout << t[i];
+    }
+    return 0;
+
+    cout << "Flag{";
+
+    for(int i = 0; i <  39; i ++){
+        cout << str[t[i] % 14];
+    }
+    cout << "}";
+    cout << '\n';
+    cout <<char(103);
+}
+

@@ -1,0 +1,11 @@
+S->VAR T
+T->variable A
+A->COMMA T
+A->COLON B
+B->Type C
+C->SEMICOLON D
+D-> Em
+D-> T
+
+
+var  a,b,c: Integer;

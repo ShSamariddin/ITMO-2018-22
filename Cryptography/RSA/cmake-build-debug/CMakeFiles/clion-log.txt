@@ -1,0 +1,4 @@
+/home/samariddin/Загрузки/clion-2019.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/samariddin/homework/cripto/RSA
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/samariddin/homework/cripto/RSA/cmake-build-debug
