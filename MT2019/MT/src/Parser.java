@@ -1,5 +1,4 @@
-import com.sun.jdi.ThreadReference;
-import com.sun.security.jgss.GSSUtil;
+
 
 import java.io.FileInputStream;
 import java.text.ParseException;
@@ -56,15 +55,17 @@ public class Parser {
         if(curToken == Token.END){
             curTree.addChild(new Tree(Token.END, "END"));
         } else{
-            curTree.addChild(new Tree(To));
+            curTree.addChild(T());
         }
+        return curTree;
     }
 
-    Tree C() throws ParseException {
+    private Tree C() throws ParseException {
         Tree curTree = new Tree(Token.TERMINAL, "C");
         Token curToken = lex.curToken;
         if (curToken == Token.SEMICOLON) {
             curTree.addChild(new Tree(Token.SEMICOLON, ";"));
+            lex.nextToken();
         } else {
             throw  new ParseException("Exceptin in function C", lex.curPos);
         }
@@ -72,11 +73,12 @@ public class Parser {
         return curTree;
     }
 
-    Tree B() throws ParseException {
+    private Tree B() throws ParseException {
         Tree curTree = new Tree(Token.TERMINAL, "B");
         Token curToken = lex.curToken;
         if (curToken == Token.TYPE) {
             curTree.addChild(new Tree(Token.TYPE, lex.getName()));
+            lex.nextToken();
         } else {
             throw new ParseException("Exception in function B", lex.curPos);
         }
@@ -85,25 +87,29 @@ public class Parser {
 
     }
 
-    Tree A() throws ParseException {
+    private Tree A() throws ParseException {
         Tree curTree = new Tree(Token.TERMINAL, "A");
         Token curToken = lex.curToken;
         if (curToken == Token.COMMA) {
             curTree.addChild(new Tree(Token.COMMA, ","));
+            lex.nextToken();
             curTree.addChild(T());
         } else if (curToken == Token.COLON) {
             curTree.addChild(new Tree(Token.COLON, ":"));
+            lex.nextToken();
             curTree.addChild(B());
         } else {
-            throw new ParseException("exception in Terminla A", lex.curPos);
+            throw new ParseException("exception in Terminla A " + lex.curToken, lex.curPos);
         }
+        return curTree;
     }
 
-    Tree T() throws ParseException {
+    private Tree T() throws ParseException {
         Tree curTree = new Tree(Token.TERMINAL, "T");
         Token curToken = lex.curToken;
         if (curToken == Token.VARIABLE) {
             curTree.addChild(new Tree(Token.VARIABLE, lex.curName.toString()));
+            lex.nextToken();
         } else {
             throw new ParseException("exception in function NewS", lex.curPos);
         }
@@ -127,7 +133,7 @@ public class Parser {
 //        }
 //    }
 
-    Tree S() throws ParseException {
+    private Tree S() throws ParseException {
         Tree curTree = new Tree(Token.TERMINAL, "S");
         Token curToken = lex.curToken;
 //        System.out.printf("C %s\n", curToken);
@@ -142,17 +148,10 @@ public class Parser {
         return curTree;
     }
 
-    public void parser(FileInputStream myFile) throws ParseException {
+    public Tree parser(FileInputStream myFile) throws ParseException {
         lex = new LexicalAnalyzer(myFile);
         lex.nextToken();
-        while (lex.curToken != Token.END) {
-            System.out.printf("%s ", lex.curName);
-            if (lex.curName.toString().equals(";")) {
-                System.out.println();
-            }
-            lex.nextToken();
-        }
-//        return S();
+        return S();
     }
 
 }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0e4aca04-6aaf-4579-9f16-e98aa8722aab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../MPP/dijkstra-ShSamariddin" beforeDir="false" afterPath="$PROJECT_DIR$/../MPP/dijkstra-ShSamariddin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/2_laba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/MT_lab2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/out/production/MT_lab2/LexicalAnalyzer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/out/production/MT_lab2/Parser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/out/production/MT_lab2/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/out/production/MT_lab2/Tree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/out/production/MT_lab2/laba2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/out/production/MT_lab2/myTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/out/production/MT_lab2/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/src/LexicalAnalyzer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/src/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/src/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/src/Tree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/src/laba2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/src/myTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MT/src/test" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1UZgJtRKihHlhADg5Z4HJxzAhAo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/graphvizapi" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e4aca04-6aaf-4579-9f16-e98aa8722aab" name="Default Changelist" comment="" />
+      <created>1575569463075</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575569463075</updated>
+      <workItem from="1575569464615" duration="31000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
