@@ -47,13 +47,16 @@
 просто записать все ребра подряд в ссылке 
 
 * example 
-  a -> b
-  b -> c
-  b -> d
-  click: http://mxwell.github.io/draw-graph/http://mxwell.github.io/draw-graph/?q=graph{a--b;b--c;b--d}#
+  1) a -> b
+  2) b -> c 
+  3) b -> d
+  
+  click: http://mxwell.github.io/draw-graph/?q=graph{a--b;b--c;b--d}#
   
   
  теперь остается только создать эту ссылку это я делаю внутри buildClick  
+ 
+ comment: вы можете использовать graphViz
  
  ####  5) Подготовка набора тестов
  все мои тесты находиться внутри checker
