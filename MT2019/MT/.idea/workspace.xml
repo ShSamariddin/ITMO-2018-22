@@ -9,9 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="939eec3a-98a6-44bf-9931-124149685595" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../MT/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="939eec3a-98a6-44bf-9931-124149685595" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,8 +78,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="myTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="myTest" />
+    <configuration name="buildClick" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="buildClick" />
       <module name="MT_lab2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,7 +108,7 @@
       <list>
         <item itemvalue="JUnit.checker.test2" />
         <item itemvalue="JUnit.checker" />
-        <item itemvalue="Application.myTest" />
+        <item itemvalue="Application.buildClick" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +132,7 @@
       <workItem from="1575538282184" duration="10077000" />
       <workItem from="1575853887096" duration="1320000" />
       <workItem from="1575904334960" duration="15468000" />
-      <workItem from="1575964674711" duration="3133000" />
+      <workItem from="1575964674711" duration="5619000" />
     </task>
     <servers />
   </component>

@@ -10,7 +10,7 @@ import java.net.URL;
 import java.text.ParseException;
 import java.util.logging.Logger;
 
-public class myTest {
+public class buildClick {
 
     public  StringBuilder printTree(Tree parser, StringBuilder ans, Boolean us) {
         for (int i = 0; i < parser.children.size(); i++) {

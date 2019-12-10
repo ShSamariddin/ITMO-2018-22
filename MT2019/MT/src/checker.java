@@ -1,7 +1,6 @@
 import junit.framework.TestCase;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
@@ -30,7 +29,7 @@ public class checker extends TestCase {
     public void test2() throws ParseException, IOException {
         FileInputStream readFile = new FileInputStream("/home/samariddin/ITMO/ITMO-2018-19/MT2019/MT/src/tests/test2");
         Parser par = new Parser();
-        myTest test = new myTest();
+        buildClick test = new buildClick();
         StringBuilder ans = test.printTree(par.parser(readFile), new StringBuilder("http://mxwell.github.io/draw-graph/?q=graph{"), false);
         ans.append("}#");
 
