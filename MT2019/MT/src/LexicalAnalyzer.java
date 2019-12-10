@@ -89,16 +89,9 @@ public class LexicalAnalyzer {
             throw new ParseException("Illegal character "
                     + (char) curChar, curPos);
         }
-        if (firstWord) {
-            if (!curName.toString().equals("var")) {
-                throw new ParseException("Illegal start "
-                        + curName.toString(), 0);
-            }
+        if (curName.toString().equals("var")) {
             curToken = Token.VAR;
-            firstWord = false;
-            return;
-        }
-        if(isType(curName.toString())){
+        } else if(isType(curName.toString())){
             curToken = Token.TYPE;
         } else{
             curToken = Token.VARIABLE;

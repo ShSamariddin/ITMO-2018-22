@@ -5,55 +5,15 @@ import java.text.ParseException;
 
 public class Parser {
     LexicalAnalyzer lex;
-
-    /*Tree C() throws ParseException {
-        Tree curTree;
-        Token  curToken  = lex.curToken;
-        System.out.println("C");
-        System.out.println(curToken);
-        if(curToken == Token.COMMA){
-            curTree = new Tree(",");
-            lex.nextToken();
-            curTree.addChild(B());
-            return curTree;
-        } else if(curToken == Token.COLON){
-            lex.nextToken();
-            if(lex.curToken == Token.TYPE){
-                lex.nextToken();
-                if(lex.curToken == Token.SEMICOLON){
-                    System.out.println(":TYPE;");
-                    curTree = new Tree(":TYPE;");
-                    lex.nextToken();
-                    System.out.println(lex.curToken);
-                    if(lex.curToken != Token.END){
-                        curTree.addChild(B());
-                        return curTree;
-                    }
-                    return curTree;
-                }
-            }
-        }
-        throw new ParseException("mistake" + lex.curToken, lex.curPos);
-    }
-    Tree B() throws ParseException {
-        Tree curTree = new Tree("B");
-        Token curToken = lex.curToken;
-        System.out.printf("VAR %s\n", curToken);
-        if(curToken == Token.VARIABLE){
-            curTree.addChild(new Tree("VARIABLE"));
-        } else{
-            throw  new ParseException("VARIABLE" + lex.curChar , lex.curPos);
-        }
-        lex.nextToken();
-        curTree.addChild(C());
-        return curTree;
-    }*/
+    private int cnt = 0;
 
     Tree D() throws  ParseException{
-        Tree curTree = new Tree(Token.TERMINAL, "D");
+        Tree curTree = new Tree(Token.TERMINAL, "D",cnt++);
         Token curToken = lex.curToken;
         if(curToken == Token.END){
-            curTree.addChild(new Tree(Token.END, "END"));
+            curTree.addChild(new Tree(Token.END, "END", cnt++));
+        } else if(curToken == Token.VAR) {
+            curTree.addChild(S());
         } else{
             curTree.addChild(T());
         }
@@ -61,10 +21,10 @@ public class Parser {
     }
 
     private Tree C() throws ParseException {
-        Tree curTree = new Tree(Token.TERMINAL, "C");
+        Tree curTree = new Tree(Token.TERMINAL, "C", cnt++);
         Token curToken = lex.curToken;
         if (curToken == Token.SEMICOLON) {
-            curTree.addChild(new Tree(Token.SEMICOLON, ";"));
+            curTree.addChild(new Tree(Token.SEMICOLON, ";", cnt++));
             lex.nextToken();
         } else {
             throw  new ParseException("Exceptin in function C", lex.curPos);
@@ -74,10 +34,10 @@ public class Parser {
     }
 
     private Tree B() throws ParseException {
-        Tree curTree = new Tree(Token.TERMINAL, "B");
+        Tree curTree = new Tree(Token.TERMINAL, "B", cnt++);
         Token curToken = lex.curToken;
         if (curToken == Token.TYPE) {
-            curTree.addChild(new Tree(Token.TYPE, lex.getName()));
+            curTree.addChild(new Tree(Token.TYPE, lex.getName(), cnt++));
             lex.nextToken();
         } else {
             throw new ParseException("Exception in function B", lex.curPos);
@@ -88,14 +48,14 @@ public class Parser {
     }
 
     private Tree A() throws ParseException {
-        Tree curTree = new Tree(Token.TERMINAL, "A");
+        Tree curTree = new Tree(Token.TERMINAL, "A", cnt++);
         Token curToken = lex.curToken;
         if (curToken == Token.COMMA) {
-            curTree.addChild(new Tree(Token.COMMA, ","));
+            curTree.addChild(new Tree(Token.COMMA, ",", cnt++));
             lex.nextToken();
             curTree.addChild(T());
         } else if (curToken == Token.COLON) {
-            curTree.addChild(new Tree(Token.COLON, ":"));
+            curTree.addChild(new Tree(Token.COLON, ":", cnt++));
             lex.nextToken();
             curTree.addChild(B());
         } else {
@@ -105,10 +65,10 @@ public class Parser {
     }
 
     private Tree T() throws ParseException {
-        Tree curTree = new Tree(Token.TERMINAL, "T");
+        Tree curTree = new Tree(Token.TERMINAL, "T", cnt++);
         Token curToken = lex.curToken;
         if (curToken == Token.VARIABLE) {
-            curTree.addChild(new Tree(Token.VARIABLE, lex.curName.toString()));
+            curTree.addChild(new Tree(Token.VARIABLE, lex.curName.toString(), cnt++));
             lex.nextToken();
         } else {
             throw new ParseException("exception in function NewS", lex.curPos);
@@ -134,11 +94,11 @@ public class Parser {
 //    }
 
     private Tree S() throws ParseException {
-        Tree curTree = new Tree(Token.TERMINAL, "S");
+        Tree curTree = new Tree(Token.TERMINAL, "S", cnt++);
         Token curToken = lex.curToken;
 //        System.out.printf("C %s\n", curToken);
         if (curToken == Token.VAR) {
-            curTree.addChild(new Tree(Token.VAR, "var"));
+            curTree.addChild(new Tree(Token.VAR, "var", cnt++));
         } else {
             throw new ParseException("exception at the beginning", lex.curPos);
         }

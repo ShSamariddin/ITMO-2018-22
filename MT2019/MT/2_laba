@@ -6,6 +6,7 @@ B->Type C
 C->SEMICOLON D
 D-> Em
 D-> T
+D-> S
 
 
 var  a,b,c: Integer;

@@ -1,0 +1,4 @@
+var X:Integer;
+    Y:char;
+    Z: Integer; T, Q, e: String;
+

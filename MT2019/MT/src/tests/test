@@ -1,4 +1,4 @@
-var samar, kamar:Integer;
+var name, vari:Integer;
     i:char;
     yes: Integer; Big, large, uf: String;
 
