@@ -40,7 +40,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/graphviz/graphviz-java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MPP/lock-free-bank-ShSamariddin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -132,7 +132,9 @@
       <workItem from="1575538282184" duration="10077000" />
       <workItem from="1575853887096" duration="1320000" />
       <workItem from="1575904334960" duration="15468000" />
-      <workItem from="1575964674711" duration="6019000" />
+      <workItem from="1575964674711" duration="6336000" />
+      <workItem from="1576524830441" duration="624000" />
+      <workItem from="1577676802680" duration="74000" />
     </task>
     <servers />
   </component>
